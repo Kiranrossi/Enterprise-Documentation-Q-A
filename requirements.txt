@@ -1,0 +1,49 @@
+# Core ML & AI
+sentence-transformers>=2.3.0
+openai>=1.12.0
+groq>=0.4.0
+transformers>=4.37.0
+torch>=2.0.0
+
+# Endee SDK
+endee>=0.1.6
+
+# Document Processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+markdown==3.5.2
+beautifulsoup4==4.12.3
+lxml==5.1.0
+
+# Text Processing
+nltk==3.8.1
+tiktoken==0.5.2
+
+# Streamlit
+streamlit==1.31.1
+streamlit-extras==0.3.6
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.6.1
+pydantic-settings==2.1.0
+tqdm==4.66.1
+
+# Data Handling
+numpy==1.26.4
+pandas==2.2.0
+
+# HTTP & API
+requests==2.31.0
+httpx==0.26.0
+
+# Logging
+loguru==0.7.2
+
+# Testing (optional for development)
+pytest==8.0.0
+pytest-cov==4.1.0
+
+# Evaluation
+scikit-learn==1.4.0
+rouge-score==0.1.2

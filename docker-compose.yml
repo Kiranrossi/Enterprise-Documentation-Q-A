@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  endee:
+    image: endeeio/endee-server:latest
+    container_name: endee-server
+    ports:
+      - "8080:8080"
+    ulimits:
+      nofile:
+        soft: 100000
+        hard: 100000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "5"
+    environment:
+      NDD_NUM_THREADS: 0  # Automatic thread detection
+      NDD_AUTH_TOKEN: ""  # Set this for authentication
+    volumes:
+      - endee-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  endee-data:
+    driver: local
